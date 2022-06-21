@@ -1,0 +1,145 @@
+@import url(https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Satisfy&family=Special+Elite&display=swap);
+@import url(Blog2.0\home2.0.html);
+@import url();
+@import url(Blog2.0\contactpg2.0.html);
+
+body {
+    background: rgb(57, 66, 75);
+    font-family: 'Merienda', cursive;
+    font-family: 'Satisfy', cursive;
+    font-family: 'Special Elite', cursive;
+  }
+
+  .div1  {
+    background-size:cover;
+    background-repeat:no-repeat;
+    max-width:45%;    
+    height:45%; 
+  }
+
+  .topnav {
+    background-color: #333;
+    overflow: hidden;
+  }
+
+  .topnav a {
+    float: left;
+    color: #c72610;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 20px;
+  }
+
+  .topnav a:hover {
+    color: aqua;
+  }
+
+  .topnav a.active {
+    color: white;
+}
+
+   .grid-container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);  
+    grid-template-areas:
+      'hd hd hd hd hd hd'
+      'sb sb lc lc rc rc'
+      'ft ft ft ft ft ft';
+    gap: 10px;
+    background-color: rgb(233, 227, 227);
+    padding: 0;
+  }
+ 
+  .img:hover {
+    opacity: 0.5;
+  }
+
+  #header {
+    display: grid;
+    grid-area: hd;
+    font-size: 40px;
+  }
+
+  #sidebar {
+    grid-area: sb;
+  }
+
+  #content-left {
+    grid-area: lc;
+    text-align: center;
+   
+  }
+
+  #content-right {
+    grid-area: rc;
+  }
+
+  .flex-container {
+    display: flex;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    border: none;
+  }
+
+  
+  /* Tablet */
+  /* Portrait and Landscape */
+  @media (min-width: 761px) and (max-width: 1024px) {
+    .grid-container {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas:
+        'hd hd hd hd'
+        'lc lc rc rc'
+        'sb sb sb sb'
+        'ft ft ft ft';
+    }
+    #sidebar {
+      min-height: 125px;
+    }
+    .flex-container .box {
+      flex-basis: 49%;
+    }
+  }
+  
+  /* Phone */
+  /* Portrait and Landscape */
+  @media (max-width: 760px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        'hd hd'
+        'lc lc'
+        'rc rc'
+        'sb sb'
+        'ft ft';
+    }
+  }
+
+  .navbar {
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .navbar a {
+    float: right;
+    display: block;
+    color: #c72610;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .navbar a:hover {
+    color: aqua;
+  }
+  
+  .navbar a.active {
+    background-color: #333D;
+    color: white;
+  }
